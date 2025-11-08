@@ -1,0 +1,46 @@
+print("AAYUSH BANK".center(50,"*"))
+class bank :
+    def __init__(self,name,bal,ac):
+        self.name= name
+        self.bal= bal
+        self.ac = ac
+    def show(self):
+        print("name :",self.name,",","balance = ",self.bal,"rs",",","account num = ",self.ac)
+        print()
+    def cre(self,cr):
+        self.bal += cr
+        print("credited amount is : ",cr,"rs")
+        print()
+       
+    def deb(self,deb):
+        self.bal-= deb
+        print("Debited amount is : ",deb,"rs")
+        print()
+data ={}
+while True:
+  try:
+   ask = int(input("1.create\n2.check bal\n3.credit\n4.debit\n5.exit\noption: "))
+   if ask == 1:       
+    name = input("enter your name : ")
+    balance = int(input("enter your balance : "))
+    acnum = int(input("enter your account number : "))
+    data[acnum] = bank(name,balance,acnum)
+    data[acnum].show()
+   elif ask == 2:
+       acnum = int(input("enter your account number : "))
+       data[acnum].show()
+   elif ask ==3:
+       acnum = int(input("enter your account number : "))
+       balance= int(input("enter your balance : "))
+       data[acnum].cre(balance)
+   elif ask ==4:
+       acnum = int(input("enter your account number : "))
+       balance= int(input("enter your balance : "))
+       data[acnum].deb(balance)
+   elif ask ==5:
+       print("exit")
+       break
+   else:
+       print("invalid")
+  except:
+      print("give only valid input")
