@@ -1,0 +1,36 @@
+import random as ran
+a= int(input("from :"))
+b= int(input("To  :"))
+if a>b:
+    a,b=b,a
+    
+
+bot = ran.randint(a,b)
+count= 0
+while True:
+    count+=1
+    choose = input("y for play\nn for exit\nchoose option :")
+    if choose == "y":
+     you = input("put your number :")
+    b= int(you)
+        if str(you).isdigit():
+            if bot == b :
+                print("******you win******" ,count)
+                break
+            elif b>bot :
+                print("To high\n try again")
+            
+            elif b<bot :
+                print(" To low\n try again")
+        else :
+            pass
+
+    elif choose == "n" :
+        print("game over")
+        break
+    else :
+        print("invalid input") 
+        pass
+            
+                  
+
