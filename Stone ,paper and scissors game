@@ -1,0 +1,42 @@
+import random 
+
+while True:
+	print("Stone, Paper and Scissors game")
+	print(" ")
+	a= input("y for play\ne for exit\nchoose option ")
+	print(" ")
+	if a== "y":
+		bot = random.choice([1,-1,0])
+
+		print("s for stone \np for paper \nc for scisors")
+		
+		youch= input("enter your choice : ")
+
+		youdict= {"s":1,"p":-1,"c":0}
+
+		reversedict={1:"stone",-1:"paper",0:"scissors"}
+
+		you= youdict[youch]
+
+		print(f"your choice : {reversedict[you]}\nbot choice : {reversedict[bot]}")
+
+		if you==bot:
+			print("draw")
+		else:
+			if you==1 and bot== -1:
+				print("you loss")
+			elif you==1 and bot== 0:
+				print("you win ")
+			elif you==-1 and bot== 1:
+				print("you win")
+			elif you==-1 and bot== 0:
+				print("you loss")
+			elif you==0 and bot== 1:
+				print("you loss")
+			elif you==0 and bot== -1:
+				print("you win")
+			else:
+				print("invalid input")
+	else:
+		print("you are exit")
+		break
