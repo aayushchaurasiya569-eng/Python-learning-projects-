@@ -1,0 +1,17 @@
+import time
+import sys
+
+lyrics = """Tujhe bin jaane, bin pehchane, maine hriday se lagaya,
+Par mere pyar ke badle mein tune mujhko yeh din dikhlaya,
+Teri bewafai pe hase jag sara gali gali guzre jidhar se,
+Jale mann tera bhi kisi ke milan ko Anamika tu bhi tarse"""
+
+# Adjust speed: smaller delay = faster
+delay = 0.16  # seconds per letter
+
+for letter in lyrics:
+    sys.stdout.write(letter)
+    sys.stdout.flush()
+    time.sleep(delay)
+
+print()  # move to new line after printing all lyrics
