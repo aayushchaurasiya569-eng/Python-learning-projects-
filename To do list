@@ -1,0 +1,45 @@
+print("TO DO LIST APP".center(55,"~"))
+lis = []
+
+class todo:
+    def show():
+        print("**YOUR LIST**")
+        for i in range(len(lis)):
+        	print(i+1,"-",lis[i])
+        print()
+        print("*"*25)	
+
+    def add(ad):
+        lis.append(ad)
+
+    def rem(re):
+        lis.remove(lis[re - 1])
+
+
+while True:
+    try:
+        ask = int(input("1.show list\n2.add task\n3.remove task\n4.exit\nchoose option : "))
+        print("*"*25)
+
+        if ask == 1:
+            todo.show()
+
+        elif ask == 2:
+            task = input("enter your task: ")
+            todo.add(task)
+            todo.show()
+                       
+        elif ask == 3:
+            n = int(input("enter the task number to remove: "))
+            todo.rem(n)
+            todo.show()
+           
+        elif ask == 4:
+            print("you are exit")
+            break
+
+        else:
+            print("invalid input")
+
+    except:
+        print("invalid")		
