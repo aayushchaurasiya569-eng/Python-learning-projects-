@@ -1,0 +1,2 @@
+a = input("num: ")
+print(f"Ascending: {"".join(sorted(list(a)))}\nDecending: {"".join(sorted(list(a),reverse=True))}")
